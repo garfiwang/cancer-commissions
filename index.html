@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>癌症與防癌保險商品佣金率大解析</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/night.css" />
+  <style>
+    :root {
+      --accent:  #ff5252;   /* 鮮紅高亮 */
+      --accent2: #4fc3f7;   /* 青色 */
+      --success: #81c784;   /* 綠色 */
+      --warn:    #ffb74d;   /* 橘黃 */
+      --dark-bg: #0f1015;
+    }
+
+    .reveal {
+      font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+    }
+    .reveal h1, .reveal h2, .reveal h3 {
+      font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      text-transform: none;
+    }
+    .reveal h1 { font-size: 1.8em; line-height: 1.25; color: #fff; }
+    .reveal h2 { font-size: 1.3em; color: var(--accent2); margin-bottom: 0.4em; }
+    .reveal h3 { font-size: 0.95em; color: #fff; margin-bottom: 0.3em; }
+    .reveal .progress { color: var(--accent); }
+    
+    /* === Tables style === */
+    .reveal table {
+      font-size: 0.38em;
+      border-collapse: collapse;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .reveal table th {
+      background: rgba(79, 195, 247, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--accent2);
+      font-weight: bold;
+      text-align: center;
+      padding: 6px 10px;
+    }
+    .reveal table td {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 4px 8px;
+      text-align: center;
+    }
+    .reveal table tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    
+    /* === Highlighting === */
+    .highlight-row {
+      background: rgba(255, 82, 82, 0.1) !important;
+    }
+    .highlight-text {
+      color: var(--accent) !important;
+      font-weight: bold !important;
+    }
+    
+    /* === Cover === */
+    .title-slide { text-align: center; }
+    .title-slide .tag {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.45em;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.0em;
+      font-weight: 600;
+    }
+    .title-slide .subtitle { font-size: 0.6em; color: #ccc; margin-top: 0.5em; }
+    .title-slide .author { margin-top: 1.8em; font-size: 0.4em; color: #888; }
+    
+    /* === Stat cards === */
+    .stat-row { display: flex; gap: 10px; justify-content: center; margin-top: 0.5em; flex-wrap: wrap; }
+    .stat-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 8px 12px;
+      text-align: center;
+      min-width: 130px;
+      flex: 1;
+    }
+    .stat-card .num { font-size: 1.3em; font-weight: 800; color: var(--accent2); line-height: 1.1; }
+    .stat-card .num.highest { color: var(--accent); }
+    .stat-card .company { font-size: 0.35em; color: #aaa; margin-top: 2px; }
+    .stat-card .label { font-size: 0.35em; font-weight: bold; color: #fff; margin-top: 4px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 140px; }
+
+    /* === Slide footer/header === */
+    .slide-footer {
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+      font-size: 0.3em;
+      color: #666;
+    }
+    
+    .scrollable-slide-container {
+      max-height: 480px;
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+    /* Scrollbar style */
+    .scrollable-slide-container::-webkit-scrollbar {
+      width: 6px;
+    }
+    .scrollable-slide-container::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.01);
+    }
+    .scrollable-slide-container::-webkit-scrollbar-thumb {
+      background: rgba(79, 195, 247, 0.25);
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- Slide 1: Cover -->
+    <section data-background-gradient="linear-gradient(135deg, #1e1f29 0%, #0f1015 100%)">
+      <div class="title-slide">
+        <div class="tag">問大師家族辦公室 · 財務規劃專題</div>
+        <h1>癌症與防癌保險商品<br/><span style="color:var(--accent);">首年佣金率</span>大解析</h1>
+        <p class="subtitle">六大壽險公司 癌症商品首年佣金率（FYC%）全面比較</p>
+        <p class="author">分析團隊：Antigravity | 報告日期：2026年7月</p>
+      </div>
+    </section>
+
+    <!-- Slide 2: Exec Summary -->
+    <section data-background-gradient="linear-gradient(135deg, #151620 0%, #0f1015 100%)">
+      <h2>各公司癌症商品最高佣金率對決</h2>
+      <p style="font-size: 0.4em; color: #aaa; margin-top: -10px;">首年實際佣金率 (FYC%) = 業績換算率 × 40%</p>
+      <div class="stat-row">
+        <div class="stat-card">
+          <div class="company">保誠人壽 (最高)</div>
+          <div class="num highest">25.60%</div>
+          <div class="label">誠心防癌2.0 (20年)</div>
+        </div>
+        <div class="stat-card">
+          <div class="company">元大人壽 (最高)</div>
+          <div class="num highest">25.60%</div>
+          <div class="label">真安心保本 (20年/15~歲)</div>
+        </div>
+        <div class="stat-card">
+          <div class="company">富邦人壽</div>
+          <div class="num">24.80%</div>
+          <div class="label">溢起防癌 (1年期)</div>
+        </div>
+        <div class="stat-card">
+          <div class="company">遠雄人壽</div>
+          <div class="num">24.80%</div>
+          <div class="label">愛無限B / 愛無懼B (20年)</div>
+        </div>
+        <div class="stat-card">
+          <div class="company">全球人壽</div>
+          <div class="num">24.00%</div>
+          <div class="label">臻心85附約 (30年)</div>
+        </div>
+        <div class="stat-card">
+          <div class="company">安達人壽</div>
+          <div class="num">11.20%</div>
+          <div class="label">愛醫靠/達文西 (1年期)</div>
+        </div>
+      </div>
+      <div style="margin-top: 1.0em; font-size: 0.42em; color: #ccc; line-height: 1.5; text-align: left; padding: 0 40px;">
+        <ul>
+          <li>🏆 <strong>全場冠軍</strong>：<span class="highlight-text">保誠 ACCRTB1 (20年)</span> 與 <span class="highlight-text">元大 A2 (20年/15歲+)</span> 以 <strong>25.60%</strong> 的首年實際佣金率並列第一。</li>
+          <li>⚡ <strong>一年期黑馬</strong>：<span style="color:var(--accent2);">富邦人壽 PCC5 (1年期)</span> 以 <strong>24.80%</strong> 的超高佣金率強勢奪得全場第三，是極具競爭力的短年期商品。</li>
+          <li>📊 <strong>年期特點</strong>：大部分商品的佣金率隨繳費年期拉長而增加，20 年期是長年期商品的佣金高峰。</li>
+        </ul>
+      </div>
+      <div class="slide-footer">問大師家族辦公室 - 癌症商品佣金率 analysis</div>
+    </section>
+
+    <!-- Slide 3: Leaderboard -->
+    <section data-background-gradient="linear-gradient(135deg, #151620 0%, #0f1015 100%)">
+      <h2>🏆 全場癌症商品佣金率 Top 12 排行榜</h2>
+      <div class="scrollable-slide-container">
+        <table>
+          <thead>
+            <tr>
+              <th>排名</th>
+              <th>保險公司</th>
+              <th>商品名稱</th>
+              <th>代號</th>
+              <th>年期</th>
+              <th>換算率</th>
+              <th>首年實際(FYC%)</th>
+              <th>年齡限制</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class='highlight-row'>
+              <td><strong>1</strong></td>
+              <td>保誠人壽</td>
+              <td style='text-align: left; font-weight: bold;'>誠心防癌2.0健康保險</td>
+              <td><code>ACCRTB1</code></td>
+              <td>20</td>
+              <td class='highlight-text'>64.00%</td>
+              <td class='highlight-text'>25.60%</td>
+              <td>-</td>
+            </tr>
+            <tr class='highlight-row'>
+              <td><strong>2</strong></td>
+              <td>元大人壽</td>
+              <td style='text-align: left; font-weight: bold;'>真安心保本防癌保險</td>
+              <td><code>A2</code></td>
+              <td>20</td>
+              <td class='highlight-text'>64.00%</td>
+              <td class='highlight-text'>25.60%</td>
+              <td>15~</td>
+            </tr>
+            <tr>
+              <td><strong>3</strong></td>
+              <td>富邦人壽</td>
+              <td style='text-align: left; font-weight: bold;'>溢起防癌終身健康保險附約</td>
+              <td><code>PCC5</code></td>
+              <td>1</td>
+              <td>62.00%</td>
+              <td>24.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>4</strong></td>
+              <td>遠雄人壽</td>
+              <td style='text-align: left; font-weight: bold;'>愛無限B型防癌照護終身健康保險附約</td>
+              <td><code>CE4</code></td>
+              <td>20</td>
+              <td>62.00%</td>
+              <td>24.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>5</strong></td>
+              <td>遠雄人壽</td>
+              <td style='text-align: left; font-weight: bold;'>愛無懼B型防癌終身健康保險附約</td>
+              <td><code>HY4</code></td>
+              <td>20</td>
+              <td>62.00%</td>
+              <td>24.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>6</strong></td>
+              <td>富邦人壽</td>
+              <td style='text-align: left; font-weight: bold;'>真馨相守防癌定期健康保險</td>
+              <td><code>CLX</code></td>
+              <td>20</td>
+              <td>61.00%</td>
+              <td>24.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>7</strong></td>
+              <td>富邦人壽</td>
+              <td style='text-align: left; font-weight: bold;'>豪愛無憂防癌定期健康保險</td>
+              <td><code>CLZ</code></td>
+              <td>20</td>
+              <td>61.00%</td>
+              <td>24.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>8</strong></td>
+              <td>富邦人壽</td>
+              <td style='text-align: left; font-weight: bold;'>樂齡增福防癌定期健康保險</td>
+              <td><code>CLQ</code></td>
+              <td>20</td>
+              <td>61.00%</td>
+              <td>24.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>9</strong></td>
+              <td>遠雄人壽</td>
+              <td style='text-align: left; font-weight: bold;'>愛無限A型防癌照護終身健康保險</td>
+              <td><code>CI4</code></td>
+              <td>20</td>
+              <td>61.00%</td>
+              <td>24.40%</td>
+              <td>0~40</td>
+            </tr>
+            <tr>
+              <td><strong>10</strong></td>
+              <td>全球人壽</td>
+              <td style='text-align: left; font-weight: bold;'>臻心85防癌定期健康保險附約</td>
+              <td><code>XCE</code></td>
+              <td>30</td>
+              <td>60.00%</td>
+              <td>24.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>11</strong></td>
+              <td>遠雄人壽</td>
+              <td style='text-align: left; font-weight: bold;'>愛無憂防癌定期保險</td>
+              <td><code>CX1</code></td>
+              <td>20</td>
+              <td>60.00%</td>
+              <td>24.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>12</strong></td>
+              <td>遠雄人壽</td>
+              <td style='text-align: left; font-weight: bold;'>愛無懼防癌保本終身保險</td>
+              <td><code>HS5</code></td>
+              <td>20</td>
+              <td>60.00%</td>
+              <td>24.00%</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="slide-footer">Top 12 癌症商品首年實際佣金率皆高於 22.40%</div>
+    </section>
+
+    <!-- Slide 4: Prudential & Yuanta -->
+    <section>
+      <h2>保誠人壽 & 元大人壽 癌症商品佣金表</h2>
+      <div class="scrollable-slide-container">
+        <h3 style="text-align: left; color: var(--accent2);">保誠人壽</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>商品名稱</th>
+              <th>代號</th>
+              <th>年期</th>
+              <th>換算率</th>
+              <th>首年實際(FYC%)</th>
+              <th>年齡限制</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class='highlight-row'>
+              <td style='text-align: left; font-weight: bold;'>誠心防癌2.0健康保險</td>
+              <td><code>ACCRTB1</code></td>
+              <td>20</td>
+              <td class='highlight-text'>64.00%</td>
+              <td class='highlight-text'>25.60%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>誠心防癌2.0健康保險</td>
+              <td><code>ACCRTB1</code></td>
+              <td>15</td>
+              <td>56.00%</td>
+              <td>22.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>誠心防癌2.0健康保險</td>
+              <td><code>ACCRTB1</code></td>
+              <td>10</td>
+              <td>40.00%</td>
+              <td>16.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛寶貝定期癌症健康保險附約</td>
+              <td><code>ACCNTR1</code></td>
+              <td>10</td>
+              <td>36.00%</td>
+              <td>14.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛要守護防癌健康保險附約</td>
+              <td><code>ACCNTR3</code></td>
+              <td>1</td>
+              <td>30.00%</td>
+              <td>12.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>珍心愛護防癌健康保險</td>
+              <td><code>ACCRTB3</code></td>
+              <td>12</td>
+              <td>26.00%</td>
+              <td>10.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>標靶守護防癌健康保險附約</td>
+              <td><code>ACCNTR2</code></td>
+              <td>1</td>
+              <td>20.00%</td>
+              <td>8.00%</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 style="text-align: left; margin-top: 15px; color: var(--accent2);">元大人壽</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>商品名稱</th>
+              <th>代號</th>
+              <th>年期</th>
+              <th>換算率</th>
+              <th>首年實際(FYC%)</th>
+              <th>年齡限制</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class='highlight-row'>
+              <td style='text-align: left; font-weight: bold;'>真安心保本防癌保險</td>
+              <td><code>A2</code></td>
+              <td>20</td>
+              <td class='highlight-text'>64.00%</td>
+              <td class='highlight-text'>25.60%</td>
+              <td>15~</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>真安心保本防癌保險</td>
+              <td><code>A2</code></td>
+              <td>20</td>
+              <td>56.00%</td>
+              <td>22.40%</td>
+              <td>0~14</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>真安心保本防癌保險</td>
+              <td><code>A2</code></td>
+              <td>15</td>
+              <td>50.00%</td>
+              <td>20.00%</td>
+              <td>15~</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>真安心保本防癌保險</td>
+              <td><code>A2</code></td>
+              <td>15</td>
+              <td>46.00%</td>
+              <td>18.40%</td>
+              <td>0~14</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>真安心保本防癌保險</td>
+              <td><code>C2</code></td>
+              <td>20</td>
+              <td>42.00%</td>
+              <td>16.80%</td>
+              <td>16~</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>終身防癌健康保險</td>
+              <td><code>HC</code></td>
+              <td>20</td>
+              <td>36.00%</td>
+              <td>14.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>真安心保本防癌保險</td>
+              <td><code>C2</code></td>
+              <td>15</td>
+              <td>33.00%</td>
+              <td>13.20%</td>
+              <td>16~</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>真安心保本防癌保險</td>
+              <td><code>A2</code></td>
+              <td>10</td>
+              <td>32.00%</td>
+              <td>12.80%</td>
+              <td>15~</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>真安心保本防癌保險</td>
+              <td><code>C2</code></td>
+              <td>20</td>
+              <td>28.00%</td>
+              <td>11.20%</td>
+              <td>0~15</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>真安心保本防癌保險</td>
+              <td><code>A2</code></td>
+              <td>10</td>
+              <td>28.00%</td>
+              <td>11.20%</td>
+              <td>0~14</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>終身防癌健康保險</td>
+              <td><code>HC</code></td>
+              <td>15</td>
+              <td>20.00%</td>
+              <td>8.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>真安心保本防癌保險</td>
+              <td><code>C2</code></td>
+              <td>15</td>
+              <td>18.00%</td>
+              <td>7.20%</td>
+              <td>0~15</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="slide-footer">保誠 ACCRTB1 與 元大 A2 為兩大公司的主力高佣商品</div>
+    </section>
+
+    <!-- Slide 5: Fubon & Farglory -->
+    <section>
+      <h2>富邦人壽 & 遠雄人壽 癌症商品佣金表</h2>
+      <div class="scrollable-slide-container">
+        <h3 style="text-align: left; color: var(--accent2);">富邦人壽</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>商品名稱</th>
+              <th>代號</th>
+              <th>年期</th>
+              <th>換算率</th>
+              <th>首年實際(FYC%)</th>
+              <th>備註 / 年齡</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class='highlight-row'>
+              <td style='text-align: left; font-weight: bold;'>溢起防癌終身健康保險附約</td>
+              <td><code>PCC5</code></td>
+              <td>1</td>
+              <td class='highlight-text'>62.00%</td>
+              <td class='highlight-text'>24.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>真馨相守防癌定期健康保險</td>
+              <td><code>CLX</code></td>
+              <td>20</td>
+              <td>61.00%</td>
+              <td>24.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>豪愛無憂防癌定期健康保險</td>
+              <td><code>CLZ</code></td>
+              <td>20</td>
+              <td>61.00%</td>
+              <td>24.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>樂齡增福防癌定期健康保險</td>
+              <td><code>CLQ</code></td>
+              <td>20</td>
+              <td>61.00%</td>
+              <td>24.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>*愛實在一年期防癌醫療健康保險附約</td>
+              <td><code>HSW1</code></td>
+              <td>20~</td>
+              <td>59.00%</td>
+              <td>23.60%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>*愛實在一年期防癌醫療健康保險附約</td>
+              <td><code>HSW2</code></td>
+              <td>20~</td>
+              <td>59.00%</td>
+              <td>23.60%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>*愛實在一年期防癌醫療健康保險附約</td>
+              <td><code>HSW3</code></td>
+              <td>20~</td>
+              <td>59.00%</td>
+              <td>23.60%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>樂齡增福防癌定期健康保險</td>
+              <td><code>CLQ</code></td>
+              <td>15</td>
+              <td>50.00%</td>
+              <td>20.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>新終身防癌健康保險附約</td>
+              <td><code>CWR3</code></td>
+              <td>20</td>
+              <td>48.00%</td>
+              <td>19.20%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>*愛實在一年期防癌醫療健康保險附約</td>
+              <td><code>HSW1</code></td>
+              <td>15~19</td>
+              <td>45.00%</td>
+              <td>18.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>*愛實在一年期防癌醫療健康保險附約</td>
+              <td><code>HSW2</code></td>
+              <td>15~19</td>
+              <td>45.00%</td>
+              <td>18.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>*愛實在一年期防癌醫療健康保險附約</td>
+              <td><code>HSW3</code></td>
+              <td>15~19</td>
+              <td>45.00%</td>
+              <td>18.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>真馨相守防癌定期健康保險</td>
+              <td><code>CLX</code></td>
+              <td>10</td>
+              <td>43.00%</td>
+              <td>17.20%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>精準保護防癌定期健康保險</td>
+              <td><code>CLW</code></td>
+              <td>10</td>
+              <td>43.00%</td>
+              <td>17.20%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>豪愛無憂防癌定期健康保險</td>
+              <td><code>CLZ</code></td>
+              <td>10</td>
+              <td>43.00%</td>
+              <td>17.20%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>真愛安康防癌定期健康保險附約</td>
+              <td><code>CNR</code></td>
+              <td>10</td>
+              <td>43.00%</td>
+              <td>17.20%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛精準防癌定期健康保險附約</td>
+              <td><code>CMR</code></td>
+              <td>10</td>
+              <td>43.00%</td>
+              <td>17.20%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>新終身防癌健康保險附約</td>
+              <td><code>CWR3</code></td>
+              <td>15</td>
+              <td>40.00%</td>
+              <td>16.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>*愛實在一年期防癌醫療健康保險附約</td>
+              <td><code>HSW1</code></td>
+              <td>10~14</td>
+              <td>38.00%</td>
+              <td>15.20%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>*愛實在一年期防癌醫療健康保險附約</td>
+              <td><code>HSW2</code></td>
+              <td>10~14</td>
+              <td>38.00%</td>
+              <td>15.20%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>*愛實在一年期防癌醫療健康保險附約</td>
+              <td><code>HSW3</code></td>
+              <td>10~14</td>
+              <td>38.00%</td>
+              <td>15.20%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>樂齡增福防癌定期健康保險</td>
+              <td><code>CLQ</code></td>
+              <td>10</td>
+              <td>36.00%</td>
+              <td>14.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>*愛實在一年期防癌醫療健康保險附約</td>
+              <td><code>HSW1</code></td>
+              <td>1~9</td>
+              <td>31.00%</td>
+              <td>12.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>*愛實在一年期防癌醫療健康保險附約</td>
+              <td><code>HSW2</code></td>
+              <td>1~9</td>
+              <td>31.00%</td>
+              <td>12.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>*愛實在一年期防癌醫療健康保險附約</td>
+              <td><code>HSW3</code></td>
+              <td>1~9</td>
+              <td>31.00%</td>
+              <td>12.40%</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 style="text-align: left; margin-top: 15px; color: var(--accent2);">遠雄人壽</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>商品名稱</th>
+              <th>代號</th>
+              <th>年期</th>
+              <th>換算率</th>
+              <th>首年實際(FYC%)</th>
+              <th>年齡限制</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class='highlight-row'>
+              <td style='text-align: left; font-weight: bold;'>愛無限B型防癌照護終身健康保險附約</td>
+              <td><code>CE4</code></td>
+              <td>20</td>
+              <td class='highlight-text'>62.00%</td>
+              <td class='highlight-text'>24.80%</td>
+              <td>-</td>
+            </tr>
+            <tr class='highlight-row'>
+              <td style='text-align: left; font-weight: bold;'>愛無懼B型防癌終身健康保險附約</td>
+              <td><code>HY4</code></td>
+              <td>20</td>
+              <td class='highlight-text'>62.00%</td>
+              <td class='highlight-text'>24.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無限A型防癌照護終身健康保險</td>
+              <td><code>CI4</code></td>
+              <td>20</td>
+              <td>61.00%</td>
+              <td>24.40%</td>
+              <td>0~40</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無憂防癌定期保險</td>
+              <td><code>CX1</code></td>
+              <td>20</td>
+              <td>60.00%</td>
+              <td>24.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無懼防癌保本終身保險</td>
+              <td><code>HS5</code></td>
+              <td>20</td>
+              <td>60.00%</td>
+              <td>24.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無價85防癌健康保險</td>
+              <td><code>CQ1</code></td>
+              <td>20</td>
+              <td>56.00%</td>
+              <td>22.40%</td>
+              <td>0~45</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無懼防癌保本終身保險</td>
+              <td><code>HS5</code></td>
+              <td>15</td>
+              <td>52.00%</td>
+              <td>20.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>新癌症終身健康保險附約(99)</td>
+              <td><code>HG6</code></td>
+              <td>20</td>
+              <td>50.00%</td>
+              <td>20.00%</td>
+              <td>14~</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無限A型防癌照護終身健康保險</td>
+              <td><code>CI4</code></td>
+              <td>20</td>
+              <td>48.00%</td>
+              <td>19.20%</td>
+              <td>41~55</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無限A型防癌照護終身健康保險</td>
+              <td><code>CI4</code></td>
+              <td>15</td>
+              <td>46.00%</td>
+              <td>18.40%</td>
+              <td>0~40</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無限B型防癌照護終身健康保險附約</td>
+              <td><code>CE4</code></td>
+              <td>15</td>
+              <td>46.00%</td>
+              <td>18.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無懼B型防癌終身健康保險附約</td>
+              <td><code>HY4</code></td>
+              <td>15</td>
+              <td>46.00%</td>
+              <td>18.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無價85防癌健康保險</td>
+              <td><code>CQ1</code></td>
+              <td>15</td>
+              <td>44.00%</td>
+              <td>17.60%</td>
+              <td>0~45</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無懼防癌保本終身保險</td>
+              <td><code>HS5</code></td>
+              <td>10</td>
+              <td>44.00%</td>
+              <td>17.60%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>新癌症終身健康保險附約(99)</td>
+              <td><code>HG6</code></td>
+              <td>15</td>
+              <td>43.00%</td>
+              <td>17.20%</td>
+              <td>14~</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無價85防癌健康保險</td>
+              <td><code>CQ1</code></td>
+              <td>15</td>
+              <td>40.00%</td>
+              <td>16.00%</td>
+              <td>46~50</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無限A型防癌照護終身健康保險</td>
+              <td><code>CI4</code></td>
+              <td>15</td>
+              <td>37.00%</td>
+              <td>14.80%</td>
+              <td>41~60</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無價85防癌健康保險</td>
+              <td><code>CQ1</code></td>
+              <td>20</td>
+              <td>36.00%</td>
+              <td>14.40%</td>
+              <td>46~50</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無限A型防癌照護終身健康保險</td>
+              <td><code>CI4</code></td>
+              <td>10</td>
+              <td>35.00%</td>
+              <td>14.00%</td>
+              <td>0~40</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無限B型防癌照護終身健康保險附約</td>
+              <td><code>CE4</code></td>
+              <td>10</td>
+              <td>35.00%</td>
+              <td>14.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無懼B型防癌終身健康保險附約</td>
+              <td><code>HY4</code></td>
+              <td>10</td>
+              <td>35.00%</td>
+              <td>14.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無價85防癌健康保險</td>
+              <td><code>CQ1</code></td>
+              <td>10</td>
+              <td>32.00%</td>
+              <td>12.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛無憂防癌定期保險</td>
+              <td><code>CX1</code></td>
+              <td>10</td>
+              <td>32.00%</td>
+              <td>12.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>愛家守護五年定期癌症健康保險附約</td>
+              <td><code>CJ2</code></td>
+              <td>5~</td>
+              <td>32.00%</td>
+              <td>12.80%</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="slide-footer">富邦 PCC5 一年期佣金達 24.80%，遠雄主力商品集中在 CE4 / HY4 (24.80%)</div>
+    </section>
+
+    <!-- Slide 6: TransGlobe & Chubb -->
+    <section>
+      <h2>全球人壽 & 安達人壽 癌症商品佣金表</h2>
+      <div class="scrollable-slide-container">
+        <h3 style="text-align: left; color: var(--accent2);">全球人壽</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>商品名稱</th>
+              <th>代號</th>
+              <th>年期</th>
+              <th>換算率</th>
+              <th>首年實際(FYC%)</th>
+              <th>年齡限制</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class='highlight-row'>
+              <td style='text-align: left; font-weight: bold;'>臻心85防癌定期健康保險附約</td>
+              <td><code>XCE</code></td>
+              <td>30</td>
+              <td class='highlight-text'>60.00%</td>
+              <td class='highlight-text'>24.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻惜85防癌定期健康保險</td>
+              <td><code>PCG</code></td>
+              <td>30</td>
+              <td>56.00%</td>
+              <td>22.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻惜一生防癌終身健康保險</td>
+              <td><code>PCF</code></td>
+              <td>30</td>
+              <td>56.00%</td>
+              <td>22.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻心85防癌定期健康保險附約</td>
+              <td><code>XCE</code></td>
+              <td>25</td>
+              <td>56.00%</td>
+              <td>22.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻惜85防癌定期健康保險</td>
+              <td><code>PCG</code></td>
+              <td>25</td>
+              <td>52.00%</td>
+              <td>20.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻惜一生防癌終身健康保險</td>
+              <td><code>PCF</code></td>
+              <td>25</td>
+              <td>52.00%</td>
+              <td>20.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻心85防癌定期健康保險附約</td>
+              <td><code>XCE</code></td>
+              <td>20</td>
+              <td>52.00%</td>
+              <td>20.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>樂齡臻愛防癌定期健康保險</td>
+              <td><code>LLD</code></td>
+              <td>20</td>
+              <td>48.00%</td>
+              <td>19.20%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻惜85防癌定期健康保險</td>
+              <td><code>PCG</code></td>
+              <td>20</td>
+              <td>48.00%</td>
+              <td>19.20%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻惜一生防癌終身健康保險</td>
+              <td><code>PCF</code></td>
+              <td>20</td>
+              <td>48.00%</td>
+              <td>19.20%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻愛一生防癌終身健康保險</td>
+              <td><code>PCH</code></td>
+              <td>20~</td>
+              <td>48.00%</td>
+              <td>19.20%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻愛一世防癌終身健康保險附約</td>
+              <td><code>XCH</code></td>
+              <td>20~</td>
+              <td>48.00%</td>
+              <td>19.20%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻愛一生防癌終身健康保險</td>
+              <td><code>PCH</code></td>
+              <td>15</td>
+              <td>44.00%</td>
+              <td>17.60%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻心85防癌定期健康保險附約</td>
+              <td><code>XCE</code></td>
+              <td>15</td>
+              <td>44.00%</td>
+              <td>17.60%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻愛一世防癌終身健康保險附約</td>
+              <td><code>XCH</code></td>
+              <td>15</td>
+              <td>44.00%</td>
+              <td>17.60%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>樂齡臻愛防癌定期健康保險</td>
+              <td><code>LLD</code></td>
+              <td>15</td>
+              <td>40.00%</td>
+              <td>16.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻惜85防癌定期健康保險</td>
+              <td><code>PCG</code></td>
+              <td>15</td>
+              <td>40.00%</td>
+              <td>16.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻惜一生防癌終身健康保險</td>
+              <td><code>PCF</code></td>
+              <td>15</td>
+              <td>40.00%</td>
+              <td>16.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻愛一生防癌終身健康保險</td>
+              <td><code>PCH</code></td>
+              <td>10</td>
+              <td>36.00%</td>
+              <td>14.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻心85防癌定期健康保險附約</td>
+              <td><code>XCE</code></td>
+              <td>10</td>
+              <td>36.00%</td>
+              <td>14.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻愛一世防癌終身健康保險附約</td>
+              <td><code>XCH</code></td>
+              <td>10</td>
+              <td>36.00%</td>
+              <td>14.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>樂齡臻愛防癌定期健康保險</td>
+              <td><code>LLD</code></td>
+              <td>10</td>
+              <td>32.00%</td>
+              <td>12.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻惜85防癌定期健康保險</td>
+              <td><code>PCG</code></td>
+              <td>10</td>
+              <td>32.00%</td>
+              <td>12.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>臻惜一生防癌終身健康保險</td>
+              <td><code>PCF</code></td>
+              <td>10</td>
+              <td>32.00%</td>
+              <td>12.80%</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 style="text-align: left; margin-top: 15px; color: var(--accent2);">安達人壽</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>商品名稱</th>
+              <th>代號</th>
+              <th>年期</th>
+              <th>換算率</th>
+              <th>首年實際(FYC%)</th>
+              <th>年齡限制</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class='highlight-row'>
+              <td style='text-align: left; font-weight: bold;'>愛醫靠一年期定期防癌健康保險附約</td>
+              <td><code>OCE001</code></td>
+              <td>1</td>
+              <td class='highlight-text'>28.00%</td>
+              <td class='highlight-text'>11.20%</td>
+              <td>-</td>
+            </tr>
+            <tr class='highlight-row'>
+              <td style='text-align: left; font-weight: bold;'>癌症達文西手術醫療附加條款</td>
+              <td><code>OCF001</code></td>
+              <td>1</td>
+              <td class='highlight-text'>28.00%</td>
+              <td class='highlight-text'>11.20%</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="slide-footer">全球最高為 XCE (24.00%)，安達以一年期 OCE001 / OCF001 (11.20%) 為主</div>
+    </section>
+
+    <!-- Slide 7: Conclusion -->
+    <section data-background-gradient="linear-gradient(135deg, #1e1f29 0%, #0f1015 100%)">
+      <div class="end-slide">
+        <h1 style="color:var(--accent2); margin-bottom: 0.4em;">癌症商品配置策略總結</h1>
+        <div style="font-size: 0.52em; color: #ddd; text-align: left; padding: 0 50px; line-height: 1.7;">
+          <ul>
+            <li>💎 <strong>高長年期佣金率選擇</strong>：若以首年佣金為主要考量，<span class="highlight-text">保誠 誠心防癌2.0 (20年 - 25.60%)</span> 與 <span class="highlight-text">元大 真安心保本 (20年/15歲以上 - 25.60%)</span> 最為優異。</li>
+            <li>⚡ <strong>高一年期佣金率選擇</strong>：若希望資金靈活配置，<span class="highlight-text">富邦人壽 溢起防癌 PCC5 (1年期 - 24.80%)</span> 的佣金表現傲視群雄。</li>
+            <li>📊 <strong>投保年齡細節</strong>：元大 A2 與 遠雄 CI4 均有明顯的投保年齡佣金率分級，規劃時須特別留意保戶年齡所對應的換算率落點。</li>
+          </ul>
+        </div>
+        <p class="tagline" style="margin-top: 1.5em; font-size: 0.55em; color: #777;">— 精準配置 · 穩健傳承 —</p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'slide',
+    transitionSpeed: 'default',
+    backgroundTransition: 'fade',
+    center: true,
+    progress: true,
+    controls: true,
+    slideNumber: 'c/t',
+    plugins: []
+  });
+</script>
+</body>
+</html>
